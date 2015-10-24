@@ -1,0 +1,1423 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* --- end public domain code --- */
+.clear:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clear {display: inline-block;}
+/* hide IE mac \*/
+* html .clear {height: 1%;}
+.clear {display: block;}
+/* */
+
+html {
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 50px;
+    background: #444;
+}
+input, button, textarea {
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    color: #700;
+}
+a:hover {
+    color: #800;
+}
+strong {
+    font-weight: bold;
+}
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: #333339;
+    border-bottom: 2px solid #555577;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, .7);
+    text-align: center;
+    padding: 5px 15px 8px 15px;
+    color: #aaa;
+    z-index: 9001;
+}
+nav a {
+    padding: 0px 5px;
+    color: #eee;
+    font-weight: 600;
+    text-decoration: none;
+}
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+header {
+    width: 100%;
+}
+
+header .fax {
+    background: #300;
+    background-size: 100% auto;
+    padding-top: 70px;
+    background: #330000; /* Old browsers */
+    background: -moz-linear-gradient(top, #360000 0%, #060607 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#360000), color-stop(100%,#060607)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #360000 0%,#060607 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #360000 0%,#060607 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #360000 0%,#060607 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #360000 0%,#060607 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#360000', endColorstr='#060607',GradientType=0 ); /* IE6-9 */
+    
+}
+
+header .fax h2 {
+    text-align: center;
+    padding: 0px 0px 15px;
+    color: white;
+    font-size: 30px;
+
+    margin: 0px auto;
+}
+header .fax .paper {
+    margin: 0px auto;
+    max-width: 960px;
+    background: url(/images/site/computerpaper.png);
+    background-size: 100% auto;
+    
+    padding: 10px 0px;
+}
+header .fax .paper .wrap {
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+header .fax .paper h1 {
+    font-size: 48px;
+    font-family: 'Special Elite';
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+header .fax .paper h1 strong {
+    text-decoration: underline;
+}
+header .fax .paper .wrap > p {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+header .fax .paper .wrap h2 {
+    color: #333;
+    padding-top: 35px;
+    font-family: "Special Elite";
+}
+header .fax .paper .wrap p.disclosure {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    opacity: .7;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+header .fax .paper .wrap p.disclosure a {
+    color: #700;
+    font-weight: 600;
+}
+header .fax .paper .wrap p.hashtag {
+    margin-top: 10px;
+    font-size: 95%;
+}
+
+footer {
+    background: url(/images/site/david-by-michelangelo.jpg) center top no-repeat;
+    background-size: 100% auto;
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+}
+footer .gutter {
+    padding: 60px 15px 60px 15px;
+    background: rgba(0, 0, 0, .3);
+}
+footer p {
+    margin-bottom: 50px;
+    line-height: 22px;
+}
+footer p.small {
+    font-size: 90%;
+    margin-bottom: 15px;
+    line-height: 18px;
+}
+footer a {
+    color: white;
+}
+div.sections {
+    background: #060607;
+    padding-bottom: 25px;
+}
+
+section {
+    padding: 60px 15px 0px 15px;
+    background: url(/images/site/section_divider.png) center top no-repeat;
+    color: #bcc7e4;
+}
+section:first-child {
+    background: none;
+}
+section h2 {
+    color: white;
+    font-size: 43px;
+    font-weight: 700;
+    text-align: center;
+    max-width: 840px;
+    margin: 0px auto 25px auto;
+}
+section h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 840px;
+    margin: 0px auto 15px auto;
+    padding-top: 15px;
+}
+section em {
+    font-style: italic;
+}
+section p {
+    font-size: 20px;
+    line-height: 26px;
+    color: #bcc7e4;
+    text-align: center;
+    max-width: 840px;
+    margin: 0px auto 25px auto;
+}
+section a {
+    color: white;
+}
+section .sidebyside {
+    text-align: center;
+}
+.sidebyside > div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 5px 25px 5px;
+}
+.sidebyside h3 {
+    font-size: 21px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0px auto 15px auto;
+    
+}
+.sidebyside .caret {
+    width: 0; 
+    height: 0;
+    margin: 10px auto -20px auto;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.sidebyside ul {
+    margin: 20px 0px 10px 0px;
+    width: 255px;
+    padding: 0px 10px;
+}
+.sidebyside li {
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+    line-height: 20px;
+}
+.sidebyside .good h3 {
+    color: #7266ec;
+}
+.sidebyside .crappy h3 {
+    color: #ff4f5b;
+}
+.sidebyside .good ul {
+    background: #6960c1;
+}
+.sidebyside .crappy ul {
+    background: #ff3947;
+}
+.sidebyside .good li {
+    border-bottom: 1px solid #5850a7;
+}
+.sidebyside .crappy li {
+    border-bottom: 1px solid #e6323e;
+}
+.sidebyside .good .caret {
+    border-bottom: 10px solid #6960c1;
+}
+.sidebyside .crappy .caret {
+    border-bottom: 10px solid #ff3947;
+}
+.sidebyside span {
+    display: block;
+    color: #ddd;
+    font-size: 11px;
+    text-align: center;
+}
+section .departments {
+    text-align: center;
+    max-width: 800px;
+    margin: 0px auto 25px auto;
+}
+.departments li {
+    display: inline-block;
+    margin: 5px;
+    vertical-align: top;
+    background: rgba(255, 57, 71, .5);
+    padding: 10px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #ddd;
+    text-align: center;
+    max-width: 200px;
+    height: 240px;
+}
+.departments li img {
+    display: block;
+    margin-bottom: 10px;
+}
+img.footer_logo {
+    display: block;
+    margin: 0px auto 0px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+div.action_bar {
+    border-top: 2px solid #444466;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: #333339;
+    z-index: 9001;
+    font-weight: 600;
+}
+div.action_bar .fftf {
+    display: none;
+    width: 258px;
+    height: 33px;
+    background-image: url(../images/site/logo.png);
+    background-position: left bottom;
+}
+div.action_bar .call {
+    
+    font-size: 30px;
+    color: #fff;
+    padding-left: 50px;
+
+}
+div.action_bar .donate {
+    margin-top: 2px;
+    margin-right: 5px;
+    float: right;
+    display: block;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #c4a63a;
+    height: 30px;
+    box-sizing: border-box;
+    line-height: 27px;
+    color: #4d3a0b;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #fadb62; /* Old browsers */
+    background: -moz-linear-gradient(top, #fadb62 0%, #d1b243 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fadb62), color-stop(100%,#d1b243)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fadb62 0%,#d1b243 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fadb62 0%,#d1b243 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fadb62 0%,#d1b243 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fadb62 0%,#d1b243 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fadb62', endColorstr='#d1b243',GradientType=0 ); /* IE6-9 */
+}
+div.action_bar a.social {
+    float: right;
+    margin-top: 2px;
+}
+div.socials {
+    text-align: center;
+    margin-bottom: 25px;
+}
+a.social {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    padding: 0px 10px 0px 40px;
+    height: 30px;
+    line-height: 27px;
+    position: relative;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-shadow: 0px -1px 0px transparent, 0px -1px 0px rgba(5, 5, 5, 0.4);
+    font-weight: 600;
+}
+
+a.social::before {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: transparent url("https://s3.amazonaws.com/fftf-cms/static/campaign/img/share.png") no-repeat scroll 0px 0px / 170px 20px;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    content: "";
+}
+a.social.facebook {
+    border: 1px solid #3b5898;
+    background: #4064ac; /* Old browsers */
+    background: -moz-linear-gradient(top, #4064ac 0%, #30497d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4064ac), color-stop(100%,#30497d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4064ac 0%,#30497d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4064ac 0%,#30497d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4064ac 0%,#30497d 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #4064ac 0%,#30497d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4064ac', endColorstr='#30497d',GradientType=0 ); /* IE6-9 */
+}
+a.social.twitter {
+    border: 1px solid #0898cc;
+    background: #01caf9; /* Old browsers */
+    background: -moz-linear-gradient(top, #01caf9 0%, #0898cc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01caf9), color-stop(100%,#0898cc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #01caf9 0%,#0898cc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #01caf9 0%,#0898cc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #01caf9 0%,#0898cc 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #01caf9 0%,#0898cc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01caf9', endColorstr='#0898cc',GradientType=0 ); /* IE6-9 */
+}
+a.social.donate {
+    border: 1px solid #4a4565;
+    background: #685a7f;
+}
+div.action_bar .donate:hover {
+    background: #dfbe46;
+}
+.social.facebook:hover {
+    background: #30497d;
+    text-shadow: none;
+}
+.social.twitter:hover {
+    background: #0898cc;
+    text-shadow: none;
+}
+.social.facebook::before {
+    background-position: -150px 0px;
+}
+.social.twitter::before {
+    background-position: -100px 0px;
+}
+.social.donate::before {
+    background-image: url(/images/fftf-heart.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+.video .embed {
+    max-width: 768px;
+    margin: 0px auto;
+}
+.video .embed .wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video .embed .wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    z-index: 9001;
+
+    -webkit-transition: opacity 0.4s ease-out;
+            transition: opacity 0.4s ease-out;
+}
+.overlay.invisible {
+    pointer-events: none;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.4s ease-out;
+            transition: opacity 0.4s ease-out;
+}
+.overlay .gutter {
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+
+    -webkit-transition: margin-top 0.4s ease-out;
+            transition: margin-top 0.4s ease-out;
+}
+.overlay.invisible .gutter {
+    margin-top: -100%;
+}
+.overlay .gutter .modal {
+    display: inline-block;
+    max-width: 600px;
+    background: white;
+    color: black;
+    margin: 0px auto;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+
+    margin-top: 50px;
+    border-radius: 10px;
+    /*
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+    */
+
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, .3);
+
+}
+
+.overlay .gutter .modal img.logo {
+    display: block;
+    margin: 0px auto .5em auto;
+}
+.overlay .gutter .modal h2 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 1.2em;
+    color: gray;
+    font-weight: 600;
+}
+.overlay .gutter .modal h3 {
+    font-weight: bold;
+    margin-bottom: 1.2em;
+}
+.overlay .gutter .modal a.close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: black;
+    opacity: .4;
+    text-decoration: none;
+    font-size: 30px;
+}
+.overlay .gutter .modal a.close:hover {
+    opacity: .6;
+}
+.overlay .gutter .modal blockquote {
+    font-family: Georgia, serif;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    margin-bottom: 1.2em;
+    color: gray;
+}
+.overlay .gutter .modal p {
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+.overlay .gutter .modal a {
+    font-weight: 600;
+}
+@media only screen and (max-width: 599px) {
+    footer {
+        background: #334bab;
+    }
+}
+@media only screen and (max-width: 767px) {
+    body {
+        padding-bottom: 0px;
+    }
+    header {
+        width: 100%;
+        background-size: 500% auto;
+    }
+    nav {
+        display: none;
+    }
+    
+    div.action_bar {
+        padding: 10px 10px;
+        position: static;
+        background: #000;
+    }
+    div.action_bar .call {
+        display: none;
+    }
+    div.action_bar .donate {
+        margin-top: 2px;
+        margin-right: 0px;
+        padding: 0px 2px;
+        font-size: .9em;
+    }
+    div.action_bar .social {
+        margin-top: 0px;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    div.action_bar .social em {
+        display: none;
+    }
+    div.action_bar .social::before {
+        left: 10px;
+    }
+    div.action_bar .fftf {
+        display: block;
+        width: 129px;
+        height: 17px;
+        background-image: url(/images/site/logo_invert.png);
+        background-position: left top;
+        margin: 9px 0px;
+    }
+    header .fax {
+        padding-top: 15px;
+    }
+    header .fax .paper .wrap {
+        padding-top: 25px;
+    }
+    header .fax .paper h1 {
+        font-size: 35px;
+    }
+    .overlay .gutter .modal {
+        margin-top: 0px;
+    }
+    .departments li {
+        display: inline-block;
+        margin: 5px;
+        vertical-align: top;
+        background: rgba(255, 57, 71, .5);
+        padding: 10px;
+        font-size: 13px;
+        line-height: 16px;
+        color: #ddd;
+        text-align: center;
+        max-width: 120px;
+        height: 180px;
+        margin: 2px;
+    }
+    .departments li img {
+        width: 120px;
+        height: 120px;
+    }
+    section h2 {
+        font-size: 25px;
+    }
+    section h3 {
+        font-size: 20px;
+    }
+    section p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.overlay .gutter ._call_modal {
+    padding: 0px;
+}
+._call_modal h2 {
+    padding: 30px 15px 0px 15px;
+}
+._call_modal p {
+    padding: 0px 25px 15px 25px;
+}
+._call_modal ._call_controls {
+    background: #ededed left top repeat-x;
+    padding: 20px 25px 25px 25px;
+    font-size: 17px;
+    color: #686868;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+._call_modal ._call_controls em {
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+._call_modal ._call_controls button {
+    border: 0px;
+    background: #fe4b60;
+    height: 53px;
+    line-height: 56px;
+    vertical-align: top;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    width: 33%;
+    cursor: pointer;
+    margin: 0px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+._call_modal ._call_controls button:hover {
+    background: #ee3b50;
+}
+._call_modal ._call_controls button.gray {
+    background: #bbb;
+}
+._call_modal ._call_controls button.gray:hover {
+    background: #aaa;
+}
+._call_modal ._call_controls input {
+    display: inline-block;
+    width: 66%;
+    vertical-align: top;
+    box-sizing: border-box;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    font-size: 22px;
+    line-height: 53px;
+    height: 53px;
+}
+._call_modal ._call_controls input.error {
+    background: #fee;
+}
+._call_modal ._call_controls a {
+    display: block;
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 19px;
+    color: #333;
+}
+._call_modal p.nopad {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+._call_modal ._call_shares {
+    padding-bottom: 25px;
+}
+._call_modal ._call_script {
+    background: #eee;
+    padding: 25px;
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+@media only screen and (max-width: 767px) {
+    ._call_modal ._call_controls {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    ._call_modal ._call_controls input {
+        width: 60%;
+        font-size: 14px;
+    }
+    ._call_modal ._call_controls button {
+        width: 40%;
+        font-size: 14px;
+    }
+}
+
+
+._fax_form {
+    text-align: center;
+}
+._fax_form * {
+    box-sizing: border-box;
+}
+._fax_form p {
+    text-align: center;
+}
+/*
+._fax_user {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    padding-top: 1px;
+}
+._fax_user ._fax_avatar {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+._fax_user ._fax_avatar ._fax_logout {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, .6);
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-top: 18px;
+    text-shadow: 0px 0px 5px black;
+    opacity: 0;
+    text-align: center;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -ms-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+    display: none;
+}
+._fax_user ._fax_avatar ._fax_logout:hover {
+    opacity: 1;
+}
+._fax_user ._fax_login {
+    display: block;
+    
+    padding: 5px 0px;
+    width: 48px;
+    padding-top: 26px;
+    height: 42px;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    background: #55acee url(/images/site/twitter.png) center top no-repeat;
+    background-size: 28px auto;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+._fax_user > span {
+    font-family: Arial;
+    font-size: 12px;
+    display: block;
+    padding: 3px 0px 0px 0px;
+}
+._fax_user > button {
+    width: 30px;
+    height: 30px;
+
+    display: inline-block;
+    font-size: 12px;
+    font-family: Arial;
+    border: 0px;
+    color: white;
+    padding: 3px 0px;
+    font-weight: bold;
+}
+._fax_user > button._fax_facebook {
+    background: #3b5995 url(/images/site/facebook.png);
+    background-size: 100% 100%;
+    margin-right: 4px;
+}
+._fax_user > button._fax_twitter {
+    background: #55acee url(/images/site/twitter.png);
+    background-size: 100% 100%;
+}
+*/
+._fax_body {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 600px;
+    max-width: 100%;
+}
+._fax_body ._fax_controls {
+    position: relative;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-top: 0px;
+    background: #eee;
+    padding: 10px;
+    margin-top: 0px;
+    min-height: 51px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+._fax_body ._fax_controls ._fax_right {
+    float: right;
+}
+._fax_body ._fax_controls input {
+    vertical-align: top;
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0px 10px;
+    width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+._fax_body ._fax_controls ._fax_submit {
+    
+    width: 115px;
+    background: #900;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 31px;
+    line-height: 26px;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+._fax_body ._fax_controls input[type=file] {
+    display: none;
+}
+._fax_body ._fax_controls ._fax_photo {
+    font-size: 15px;
+    color: #900;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0px 5px;
+    background: transparent;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+._fax_body ._fax_controls ._fax_photo * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+._fax_body ._fax_controls ._fax_photo._fax_active {
+    color: white;
+    background: #900;
+}
+._fax_body ._fax_controls ._fax_photo span {
+    font-size: 13px;
+}
+._fax_body ._fax_controls ._fax_photo:hover {
+    border: 1px solid rgba(128, 0, 0, .3);
+}
+._fax_body ._fax_controls ._fax_photo ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    padding-top: 28px;
+    z-index: 2;
+}
+._fax_body ._fax_controls ._fax_photo ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, .75);
+    font-size: 12px;
+}
+._fax_body ._fax_controls ._fax_photo ul li a:hover {
+    background: black;
+}
+._fax_body ._fax_controls ._fax_photo ul li a._fax_file {
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+._fax_body ._fax_controls i {
+    margin-right: 5px;
+}
+
+._fax_body ._fax_controls ._fax_submit:disabled { 
+    background: #888;
+    cursor: default;
+}
+._fax_body ._fax_controls ._fax_submit:disabled i {
+    display: none;
+}
+._fax_body ._fax_controls ._fax_submit:disabled span {
+    display: none;
+}
+._fax_body ._fax_controls ._fax_submit:disabled ._fax_spinner_container {
+    display: block;
+}
+._fax_body ._fax_controls ._fax_submit:hover {
+    background: #700;
+}
+._fax_body ._fax_controls ._fax_submit:disabled:hover {
+    background: #888;
+}
+
+._fax_body ._fax_controls ._fax_preview {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    background: #444;
+    display: none;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+}
+._fax_body ._fax_controls ._fax_preview a {
+
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 12px;
+    font-size: 15px;
+    padding: 3px 4px;
+    background: black;
+    opacity: .6;
+}
+._fax_body ._fax_controls ._fax_preview a:hover {
+    opacity: 1;
+}
+
+._fax_body > textarea {
+    display: block;
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+    padding: 11px 19px;
+    border: 1px solid #aaa;
+    color: #888;
+    margin: 0px;
+    resize: none; 
+    outline: none;
+    margin-bottom: 0px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow:hidden;
+}
+._fax_body > textarea._fax_expanded {
+    height: 95px;
+    color: black;
+}
+
+._fax_canvas {
+    display: none;
+}
+._fax_photo {
+    display: none;
+}
+.overlay .gutter .modal._fax_photo_modal {
+    max-width: 640px;
+    padding: 0px;
+}
+._fax_photo_modal_body {
+    background: #fff;
+    padding: 30px 0px 0px 0px;
+    font-size: 22.42px;
+    line-height: 29px;
+    max-width: 745px;
+}
+._fax_photo_modal_body ._fax_photo_controls {
+    background: #ededed left top repeat-x;
+    padding: 20px 15px 25px 15px;
+    font-size: 17px;
+    color: #686868;
+}
+._fax_photo_modal_body ._fax_photo_controls button {
+    border: 0px;
+    background: #fe4b60;
+    height: 58px;
+    line-height: 56px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    width: 226px;
+    cursor: pointer;
+    margin: 3px 3px;
+}
+._fax_photo_modal_body ._fax_photo_controls button:hover {
+    background: #ee3b50;
+}
+._fax_photo_modal_body ._fax_photo_controls button._fax_gray {
+    background: #bbb;
+}
+._fax_photo_modal_body ._fax_photo_controls button._fax_gray:hover {
+    background: #aaa;
+}
+._fax_photo_modal_body ._fax_photo_controls button._fax_photo_use {
+    display: none;
+}
+._fax_photo_modal_body ._fax_photo_controls button._fax_photo_retake {
+    display: none;
+}
+._fax_video_container {
+    position: relative;
+}
+._fax_video_container video {
+    width: 640px;
+    min-height: 300px;
+    background: url(/images/fax/webcam_ask.png) center center no-repeat;
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+._fax_video_container ._fax_frame {
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: url(/images/fax/overlay.png) center center no-repeat;
+    display: none;
+}
+.overlay .gutter .modal._fax_modal {
+    max-width: 600px;
+    padding: 0px;
+}
+.overlay .gutter .modal._fax_modal ._fax_top {
+    padding: 20px 20px 5px 20px;
+}
+.overlay .gutter .modal._fax_modal h2 {
+    margin-bottom: 15px;
+}
+.overlay .gutter .modal._fax_modal p {
+}
+.overlay .gutter .modal._fax_modal p em {
+    display: block;
+}
+.overlay .gutter .modal._fax_modal p a {
+    display: block;
+}
+._fax_modal a.social {
+    width: 140px;
+    margin-bottom: 10px;
+}
+._fax_modal ._fax_page {
+    position: relative;
+    padding: 30px 30px 15px 30px;
+    background: #aaa;
+    -webkit-box-shadow: inset -1px 7px 23px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset -1px 7px 23px 0px rgba(0,0,0,0.2);
+    box-shadow: inset -1px 7px 23px 0px rgba(0,0,0,0.2);
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+}
+._fax_modal ._fax_page a._fax_image {
+    display: block;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 120%;
+    background-color: #fff;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, .3);
+}
+._fax_modal ._fax_page ._fax_promo {
+    margin-top: 20px;
+    background: #ccc;
+    border-radius: 50px;
+    line-height: 14px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: #444;
+    display: inline-block;
+}
+._fax_modal ._fax_edit_options {
+    margin-top: 5px;
+    border-top: 1px solid #cc9;
+    border-bottom: 1px solid #cc9;
+    background: #ffc;
+    padding: 10px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .5);
+}
+._fax_modal ._fax_edit_options a {
+    text-decoration: none;
+    color: #0898cc;
+}
+
+._fax_thanks {
+    display: none;
+}
+._fax_thanks p {
+    margin-bottom: 15px;
+}
+._fax_thanks a.social {
+    margin-bottom: 5px;
+}
+body._fax_no_overflow {
+    overflow: hidden !important;
+    overflow-y: hidden;
+}
+
+@-webkit-keyframes _fax_flash {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+@keyframes _fax_flash {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+._fax_flash {
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-animation-name: _fax_flash;
+    animation-name: _fax_flash;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+._fax_flash { z-index: 9005; display: none; pointer-events: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: white; opacity: 0; }
+
+@-webkit-keyframes _fax_bladeFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes _fax_bladeFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+._fax_spinner_container {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0px auto;
+    display: none;
+}
+._fax_modal ._fax_spinner_container {
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: 60px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    z-index: 9000;
+}
+._fax_spinner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+._fax_spinner ._fax_blade {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    margin-top: -4%;
+    height: 8%; 
+    width: 100%;
+}
+
+._fax_spinner ._fax_blade > div {
+    width: 25%;
+    margin: 0px 0px 0px auto;
+    height: 100%;
+    background: #fff;
+    border-radius: 1000px;
+    opacity: 1;
+
+    -webkit-animation-duration: 2s; 
+    animation-duration: 2s;
+    -webkit-animation-name: _fax_bladeFade;
+    animation-name: _fax_bladeFade;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+._fax_modal ._fax_spinner ._fax_blade > div {
+    background: #888;
+}
+
+._fax_spinner ._fax_blade._fax_d02 {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+._fax_spinner ._fax_blade._fax_d02 div {
+    -webkit-animation-delay: -0.1666666666666667s;
+    animation-delay: -0.1666666666666667s;
+}
+
+._fax_spinner ._fax_blade._fax_d03 {
+    -ms-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+._fax_spinner ._fax_blade._fax_d03 div {
+    -webkit-animation-delay: -0.3333333333333333s;
+    animation-delay: -0.3333333333333333s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d04 {
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+._fax_spinner ._fax_blade._fax_d04 > div {
+    -webkit-animation-delay: -0.5000000000000001s;
+    animation-delay: -0.5000000000000001s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d05 {
+    -ms-transform: rotate(-120deg);
+    -webkit-transform: rotate(-120deg);
+    transform: rotate(-120deg);
+}
+._fax_spinner ._fax_blade._fax_d05 > div {
+    -webkit-animation-delay: -0.6666666666666669s;
+    animation-delay: -0.6666666666666669s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d06 {
+    -ms-transform: rotate(-150deg);
+    -webkit-transform: rotate(-150deg);
+    transform: rotate(-150deg);
+}
+._fax_spinner ._fax_blade._fax_d06 > div {
+    -webkit-animation-delay: -0.8333333333333336s;
+    animation-delay: -0.8333333333333336s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d07 {
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+._fax_spinner ._fax_blade._fax_d07 > div {
+    -webkit-animation-delay: -1.0000000000000002s;
+    animation-delay: -1.0000000000000002s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d08 {
+    -ms-transform: rotate(-210deg);
+    -webkit-transform: rotate(-210deg);
+    transform: rotate(-210deg);
+}
+._fax_spinner ._fax_blade._fax_d08 > div {
+    -webkit-animation-delay: -1.166666666666667s;
+    animation-delay: -1.166666666666667s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d09 {
+    -ms-transform: rotate(-240deg);
+    -webkit-transform: rotate(-240deg);
+    transform: rotate(-240deg);
+}
+._fax_spinner ._fax_blade._fax_d09 > div {
+    -webkit-animation-delay: -1.3333333333333337s;
+    animation-delay: -1.3333333333333337s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d10 {
+    -ms-transform: rotate(-270deg);
+    -webkit-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+}
+._fax_spinner ._fax_blade._fax_d10 > div {
+    -webkit-animation-delay: -1.5000000000000004s;
+    animation-delay: -1.5000000000000004s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d11 {
+    -ms-transform: rotate(-300deg);
+    -webkit-transform: rotate(-300deg);
+    transform: rotate(-300deg);
+}
+._fax_spinner ._fax_blade._fax_d11 > div {
+    -webkit-animation-delay: -1.6666666666666672s;
+    animation-delay: -1.6666666666666672s;
+}
+
+
+._fax_spinner ._fax_blade._fax_d12 {
+    -ms-transform: rotate(-330deg);
+    -webkit-transform: rotate(-330deg);
+    transform: rotate(-330deg);
+}
+._fax_spinner ._fax_blade._fax_d12 > div {
+    -webkit-animation-delay: -1.833333333333334s;
+    animation-delay: -1.833333333333334s;
+}
+@media only screen and (max-width: 599px) {
+    ._fax_body {
+        width: 100%;
+    }
+    ._fax_body ._fax_controls ._fax_photo {
+        display: none;
+    }
+    ._fax_body ._fax_controls ._fax_right {
+        float: none;
+    }
+    ._fax_body ._fax_controls input {
+        width: 90px;
+    }
+    ._fax_body > textarea {
+        font-size: 15px;
+    }
+    ._fax_modal a.social {
+        width: 120px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    ._fax_modal a.social.donate {
+        display: none;
+    }
+}

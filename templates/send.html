@@ -1,0 +1,186 @@
+<html>
+<style type="text/css">
+    #loader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: rgba(0, 0, 0, .66);
+        z-index: 90000;
+    }
+    .loading {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+    }
+    .loading h1 {
+        position: absolute;
+        bottom: -90px;
+        left: -140px;
+        width: 300px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        font-weight: normal;
+        font-family: Arial;
+        margin: 0px;
+        padding: 0px;
+    }
+    .loading .dot {
+        position: absolute;
+        border-radius: 50%;
+        left: 1px;top: 1px;
+        width: 18px;
+        height: 18px;
+        background: white;
+        -webkit-animation: spin 2.5s 0s infinite both;
+        animation: spin 2.5s 0s infinite both;
+    }
+    .loading .dot2 {
+        position: absolute;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background: white;
+        -webkit-animation: spin 2.5s 0s infinite both;
+        animation: spin2 2.5s 0s infinite both;
+
+    }
+
+    @keyframes spin {
+      0%, 100% {
+       box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      25%, 75% {
+        box-shadow: 28px 0 0 white, -28px 0 0 white, 0 28px 0 white, 0 -28px 0 white, 20px -20px 0 white, 20px 20px 0 white,  -20px -20px 0 white, -20px 20px 0 white;
+
+      }
+      100% {
+        transform: rotate(360deg);
+         box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+    }
+    @-webkit-keyframes spin {
+      0%, 100% {
+       box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+      50% {
+        -webkit-transform: rotate(180deg);
+      }
+      25%, 75% {
+        box-shadow: 28px 0 0 white, -28px 0 0 white, 0 28px 0 white, 0 -28px 0 white, 20px -20px 0 white, 20px 20px 0 white,  -20px -20px 0 white, -20px 20px 0 white;
+
+      }
+      100% {
+         -webkit-transform: rotate(360deg);
+         box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+    }
+
+    @keyframes spin2 {
+      0%, 100% {
+       box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+      50% {
+        transform: rotate(-180deg);
+      }
+      25%, 75% {
+        box-shadow: 52px 0 0 white, -52px 0 0 white, 0 52px 0 white, 0 -52px 0 white, 38px -38px 0 white, 38px 38px 0 white,  -38px -38px 0 white, -38px 38px 0 white;
+        background: transparent;
+      }
+      100% {
+        transform: rotate(-360deg);
+         box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+    }
+    @-webkit-keyframes spin2 {
+      0%, 100% {
+       box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+      50% {
+        -webkit-transform: rotate(-180deg);
+      }
+      25%, 75% {
+        box-shadow: 52px 0 0 white, -52px 0 0 white, 0 52px 0 white, 0 -52px 0 white, 38px -38px 0 white, 38px 38px 0 white,  -38px -38px 0 white, -38px 38px 0 white;
+        background: transparent;
+      }
+      100% {
+        -webkit-transform: rotate(-360deg);
+         box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white; 
+      }
+    }
+</style>
+<title>Generating your fax</title>
+<body>
+    <div id="loader" class="invisible">
+        <div class="loading">
+            <div class="dot"></div>
+            <div class="dot2"></div>
+            <h1>... generating your fax ...</h1>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var data = new FormData();
+
+        var t = getParameterByName('t');
+        var org = getParameterByName('org');
+
+        if (t) {                
+
+            t = atob(t).split(',');
+            var user_id = '';
+            for (var i = 0; i < t.length; i++)
+                if (t[i].indexOf('userid=') != -1)
+                    user_id = t[i].substr(7);
+
+            if (!user_id)
+                window.location.replace('/');
+
+            data.append('purpose_user_id', user_id);
+        } else {
+            data.append('autogenerate', true);
+        }
+
+        var xhr = new XMLHttpRequest();
+        
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4)
+            {
+                var response = JSON.parse(xhr.response);
+
+                if (response.access_token && response.edit_token)
+                {
+                    var redirect_url = '/fax/'+response.access_token+'?e='+response.edit_token;
+
+                    if (org == 'fftf')
+                        redirect_url += '&org=fftf';
+
+                    window.location.replace(redirect_url);
+                } else
+                    window.location.replace('/');
+            }
+        }.bind(this);
+        xhr.open("post", '/fax', true);
+        xhr.send(data);
+
+        console.log(user_id);
+
+    </script>
+</body>
+</html>

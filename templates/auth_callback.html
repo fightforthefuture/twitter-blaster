@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+    <title>Authorizing...</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.opener.authSuccess('{{ user }}');
+        window.close();
+    </script>
+</body>
+</html>

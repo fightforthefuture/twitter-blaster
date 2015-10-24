@@ -1,0 +1,11 @@
+Dear Senator, 
+
+I'm writing you as a part of the effort to stop CISA, a weak cybersecurity bill that would put us all at greater risk to hacks than ever before. This bill actually makes more private info more vulnerable to hacks. Please protect the Internet by opposing the Cybersecurity Information Sharing Act of 2015 (CISA, S. 754). By granting companies sweeping liability protection for sharing private information with the government, the bill would endanger the privacy and civil liberties of Internet users and make the Internet more vulnerable to attacks. 
+
+CISA fails as a cybersecurity bill because it does the following: undermines civilian agency leadership of U.S. cybersecurity efforts in favor of automatic and simultaneous transfer of cybersecurity information to U.S. intelligence agencies; allows entities to transfer personally identifiable information to the government; authorizes the federal government to use the information in a broad range of investigations and prosecutions; provides broad immunity protections for corporations, disincentivizing companies from protecting the privacy of users; and fails to incorporate the critical role of transparency in oversight, providing a broad new categorical exemption from disclosure under the Freedom of Information Act, the first since the Act’s passage in 1966.
+
+The bill also contains a defensive measures provision that would create new security risks by potentially permitting companies to “hack back” against perceived threats in such a way that would otherwise be illegal under current law.
+
+Recent events have further heightened opposition to CISA. First, the government has used cyber indicators as the basis for searches of Internet traffic. Second, multiple government reports conclude the federal government has serious computer security flaws unrelated to information sharing. Sending more personal information to federal agencies is not the answer to cybersecurity threats to personal information.
+
+Cybersecurity and privacy are not at odds. CISA is neither a serious solution to many of the current threats we face nor does it adequately account for privacy and civil liberties. We urge you to reject CISA.
